@@ -1,0 +1,87 @@
+/*INTERACTIVE MOBILE UI*/
+@media(max-width: 500px){
+  /*FOR PARTICLES BACKGROUND*/
+  #particles-js{
+    background-image: url("slide2.jpg");
+    width: 500px;
+    height: 666px;
+  }
+  /*FOR CUEPAMS LEFT SIDE*/
+  .side > aside{
+      color: darkslategray;
+      font-size: 2.8em;
+      margin-left: 5%;
+      font-family: Samarkan;
+      position: absolute;
+      top: 5%;
+  }
+  /*CHANGING THE LOGIN*/
+  body{
+    margin: 0;
+    color: #333;
+    font-size: 15px;
+  }
+  /*DESIGN FOR LOGIN BOX*/
+  #login{
+    background: transparent;
+    opacity: 0.9;
+    padding: 2em;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    text-align: center;
+    font-weight: bold;
+  }
+  /*STYLING INPUT TYPE*/
+  #login input[type="text"],#login input[type="password"]{
+    padding: 4%;
+    text-align: center;
+    background-color: inherit;
+    border-radius: 10px;
+    box-shadow: 10px 4px 150px blue;
+    border: 1px solid #4A4A4A;
+    font-size: 15px;
+  }
+  /*STYLING BUTTON STYLE*/
+  #button{
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: orangered;
+    color: #fff;
+    border: 0px;
+    font-weight: bold;
+  }
+  /*STYLING BUTTON DIV*/
+  #buttoner{
+    text-align: center;
+    padding: 40px;
+  }
+  /*PARA UNDER INPUT*/
+  .under{
+    color: black;
+    font-weight: bold;
+    text-align: right;
+    font-size: 14px;
+  }
+  /*LAST PARA*/
+  #last{
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 30px;
+  }
+  /*STYLING A TAG*/
+  #last>a:link,#last>a:active,#last>a:visited{
+    color: white;
+  }
+  /*STYLING FOOTER*/
+  #footdiv{
+    color: white;
+    position: absolute;
+    top: 130%;
+    font-size: 16px;
+    margin-left: 35%;
+  }
+}

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>OYO Hotels</title>
+  <link rel="shortcut icon" href="images/try.png" type="image/x-icon" />
+  <link rel="stylesheet" href="css/design.css"/>
+  <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+  <!--DASHBOARD-->
+  <header>
+    <ul id="header-list">
+      <li class="header-container" id="lgo"><a href="index.html"><img src="images/OYO-white.png" class="header-logo" alt="logo"/><img src="images/logo.png" style="display: none" class="header-logo" alt="logo"/><img src="images/oyo-rooms.png" style="display: none" class="header-logo" alt="logo"/></a></li>
+      <li class="header-container up"><a href="#down-rooms"><button class="header-button">Rooms</button></a></li>
+      <li class="header-container up"><a href="#"><button class="header-button">Gallery</button></a></li>
+      <li class="header-container up"><a href="#"><button class="header-button">Contact</button></a></li>
+      <li class="header-container up" id="header-last"><a href="http://0.0.0.0:8081/samples/login.html"><button class="header-button">Login / Signup</button></a></li>
+    </ul>
+  </header>
+  <br/><br/><br/><br/><br/>
+  <!--DIV FOR CENTER CONTENT-->
+  <div id="center-content">
+    <div id="inner-center-content">
+        <div id="inner-text"><span class="col">OYO Hotels</span></div>
+        <div>          
+              <span>
+                  <details>
+                    <summary id="summ" onclick="getLocation();"><span class="col" style="font-size: 1.5em;">BOOK NOW !!!</span></summary>
+                    <!--FORM DATA-->
+                    <div id="sum-form">
+                      <form>
+                        <label for="checkin">Check In</label>
+                        <br/>
+                        <input type="date" id="d1" required/>
+                        <br/>
+                        <label for="checkout">Check Out</label>
+                        <br/>
+                        <input type="date" id="d2" required/><br/>
+                        <label for="type of room">Rooms</label>
+                        <br/>
+                        <select id="typebed" onclick="selectbed()" required>
+                          <option>select room</option>
+                          <option value="single">Single Bed</option>
+                          <option value="double">Double Bed</option>
+                          <option value="triple">Triple Bed</option>
+                          <option value="custom">Customised</option>
+                        </select>
+                        <select id="typenumber" required>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                        </select>
+                        <br/>
+                        <!--######################################################################################################-->
+                        <!--USING DRAG AND DROP API-->
+                        <div id="id01" class="modal">
+                          <!--CONTENT OF CUSTOM-->
+                          <div class="modal-content animate">
+    
+                            <div class="imgcontainer">
+                            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <a href="index.html">
+                            <img src="images/logo.png" alt="Avatar" class="avatar">
+                            </a>
+                            </div>
+                            <!--######################### DRAG AND DROP API#######################################-->
+                            <div>
+                                <div class="set-draganddrop" id="drag-left">
+                                    <p>Customise your room:</p>
+                                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                                    <span>Customised Room:</span><br/>
+                                    Single Bed: <span id="sbed">0</span><br/>
+                                    Sofas: <span id="sfa">0</span><br/>
+                                    Wifi: <span id="wfi">0</span><br/>
+                                    Double Bed: <span id="dbed">0</span>
+                                </div>
+                                <div class="set-draganddrop" id="drag-right">
+                                  <p>Single Room Set</p>
+                                  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                      <img id="drag1" src="images/custom/singlebed.png" draggable="true" ondragstart="drag(event)" class="bed">
+                                      <img id="drag2" src="images/custom/sofa with lamp.jpg" draggable="true" ondragstart="drag(event)" class="bed">
+                                      <img id="drag3" src="images/custom/WiFi-Icon-Missing.png" draggable="true" ondragstart="drag(event)" class="bed">
+                                  </div>
+                                  <p>Double Room Set</p>
+                                  <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                      <img id="drag4" src="images/custom/double bed.jpeg" draggable="true" ondragstart="drag(event)" class="bed">
+                                      <img id="drag5" src="images/custom/sofa with lamp.jpg" draggable="true" ondragstart="drag(event)" class="bed">
+                                      <img id="drag6" src="images/custom/WiFi-Icon-Missing.png" draggable="true" ondragstart="drag(event)" class="bed">
+                                  </div>
+                                  <p>Triple Room Set</p>
+                                  <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                      <img id="drag7" src="images/custom/singlebed.png" draggable="true" ondragstart="drag(event)" class="bed">
+                                      <img id="drag8" src="images/custom/double bed.jpeg" draggable="true" ondragstart="drag(event)" class="bed">
+                                      <img id="drag9" src="images/custom/WiFi-Icon-Missing.png" draggable="true" ondragstart="drag(event)" class="bed">
+                                  </div>
+                                </div> 
+                            </div>
+                        
+                            <div style="text-align: center">
+                              Total Cost:
+                              <span id="c1">0</span> +
+                              <span id="c2">0</span> +
+                              <span id="c3">0</span> +
+                              <span id="c4">0</span> =
+                              <span id="total-c">0</span>
+                              <br/>
+                              <button onclick="sub();">Submit Data</button>
+                            </div>
+                            
+                          </div>
+                        </div>
+                        <!--###################################################################3-->
+
+                        <input type="reset" value="Reset" class="form-button"/>
+                        <input type="button" value="Done" class="form-button" onclick="done()"/>  
+                        <p><a href="#payment" id="hide">Do payment</a></p>
+                      </form>
+                    </div>
+                  </details>
+              </span>
+        </div>
+        <!--GOOGLE MAP IMAGE-->
+        <div>
+          <a href="https://www.google.co.in/maps/search/oyo+hotels/@30.7243837,76.771263,14z/data=!3m1!4b1" id="submit-hide">
+          <img src="images/frontmap.png" alt="map" title="click here to see hotels around you" id="center-image"/>
+          </a>
+        </div>
+    </div>
+  </div>
+  <!--SLIDING IMAGES-->
+  <section id="arrow">
+      <div class="slideshow-container">
+          <div class="mySlides fade">
+            <img src="images/oyo1.jpg" style="width:102.9%; height: 53vw">
+            <div class="text">OYO's Riverside Hotel and Restaurent</div>
+          </div>
+          
+          <div class="mySlides fade">
+            <img src="images/oyo2.jpg" style="width:102.9%; height: 53vw">
+            <div class="text">Front VIew of OYO Hotel</div>
+          </div>
+        
+          <div class="mySlides fade">
+             <img src="images/oyo3.jpg" style="width:102.9%; height: 53vw">
+            <div class="text">OYO's Help Desk</div>
+          </div>
+        
+        </div>
+        <script>
+          var slideIndex = 0;
+          showSlides();
+          function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides"); //images array
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) 
+              {
+                slideIndex = 1
+              }    
+              document.getElementsByClassName('up')[0].style.backgroundColor = "transparent";
+              document.getElementsByClassName('up')[0].style.borderRadius = "none";
+              document.getElementsByClassName('up')[1].style.backgroundColor = "transparent";
+              document.getElementsByClassName('up')[1].style.borderRadius = "none";
+              document.getElementsByClassName('up')[2].style.backgroundColor = "transparent";
+              document.getElementsByClassName('up')[2].style.borderRadius = "none";
+              document.getElementsByClassName('up')[3].style.backgroundColor = "transparent";
+              document.getElementsByClassName('up')[3].style.borderRadius = "none";
+
+              //LOGOS
+              document.getElementsByClassName('header-logo')[0].style.display = "block";
+              document.getElementsByClassName('header-logo')[1].style.display = "none";
+              document.getElementsByClassName('header-logo')[2].style.display = "none";
+
+              if(slideIndex == 2) //for second image
+              {
+                document.getElementsByClassName('up')[0].style.backgroundColor = "rgb(238, 69, 69)";
+                document.getElementsByClassName('up')[0].style.borderRadius = "20px";
+                document.getElementsByClassName('up')[1].style.backgroundColor = "rgb(238, 69, 69)";
+                document.getElementsByClassName('up')[1].style.borderRadius = "20px";
+                document.getElementsByClassName('up')[2].style.backgroundColor = "rgb(238, 69, 69)";
+                document.getElementsByClassName('up')[2].style.borderRadius = "20px";
+                document.getElementsByClassName('up')[3].style.backgroundColor = "rgb(238, 69, 69)";
+                document.getElementsByClassName('up')[3].style.borderRadius = "20px";
+                //LOGOS
+                document.getElementsByClassName('header-logo')[0].style.display = "none";
+                document.getElementsByClassName('header-logo')[1].style.display = "block";
+                document.getElementsByClassName('header-logo')[2].style.display = "none";
+              }
+              else if(slideIndex == 3) //for second image
+              {
+                document.getElementsByClassName('up')[0].style.backgroundColor = "black";
+                document.getElementsByClassName('up')[0].style.borderRadius = "20px";
+                document.getElementsByClassName('up')[1].style.backgroundColor = "black";
+                document.getElementsByClassName('up')[1].style.borderRadius = "20px";
+                document.getElementsByClassName('up')[2].style.backgroundColor = "black";
+                document.getElementsByClassName('up')[2].style.borderRadius = "20px";
+                document.getElementsByClassName('up')[3].style.backgroundColor = "black";
+                document.getElementsByClassName('up')[3].style.borderRadius = "20px";
+                //LOGOS
+                document.getElementsByClassName('header-logo')[0].style.display = "none";
+                document.getElementsByClassName('header-logo')[1].style.display = "none";
+                document.getElementsByClassName('header-logo')[2].style.display = "block";
+              }
+              slides[slideIndex-1].style.display = "block";  
+              setTimeout(showSlides, 4000); // Change image every 4 seconds
+          }
+        </script>
+    </section>
+    <div style="padding: 3.3vw;background-color:  rgb(250, 63, 63);margin-left: -8px;margin-right: -8px;" id="down-rooms">
+    </div>
+    <!--SECOND SECTION ROOMS-->
+    <section>
+      <div id="rooms">
+        <!--#########################################################################-->
+        <div class="rooms-slide">
+          <div>
+            <img src="images/singlebed.jpg" alt="" class="rooms-image"/>
+          </div>
+          <p>Single Room Set</p>
+          <p>Cost: Rs.100</p>
+          <a href="#arrow"><p class="booknow">Book Now !!!</p></a>
+          <div class="tags">
+            <span>Tags: </span>
+            <img src="images/custom/singlebed.png" alt="" class="BED"/>
+            <img src="images/custom/sofa with lamp.jpg" alt="" class="BED"/>
+            <img src="images/custom/WiFi-Icon-Missing.png" alt="" class="BED"/>
+          </div>
+        </div>
+        <!--#########################################################################-->
+        <div class="rooms-slide">
+          <div>
+              <img src="images/doublebred.jpg" alt="" class="rooms-image"/>
+          </div>
+          <p>Double Room Set</p>
+          <p>Cost: Rs.200</p>
+          <a href="#arrow"><p class="booknow">Book Now !!!</p></a>
+          <div class="tags">
+            <span>Tags: </span>
+            <img src="images/custom/double bed.jpeg" alt="" class="BED"/>
+            <img src="images/custom/sofa with lamp.jpg" alt="" class="BED"/>
+            <img src="images/custom/WiFi-Icon-Missing.png" alt="" class="BED"/>
+          </div>
+        </div>
+        <!--#########################################################################-->
+        <div class="rooms-slide">
+          <div>
+              <img src="images/triplebed.jpg" alt="" class="rooms-image"/>
+          </div>
+          <p>Triple Room Set</p>
+          <p>Cost: Rs.300</p>
+          <a href="#arrow"><p class="booknow">Book Now !!!</p></a>
+          <div  class="tags">
+            <span>Tags: </span>
+            <img src="images/custom/singlebed.png" alt="" class="BED"/>
+            <img src="images/custom/double bed.jpeg" alt="" class="BED"/>
+            <img src="images/custom/WiFi-Icon-Missing.png" alt="" class="BED"/>
+          </div>
+        </div>
+        <!--#########################################################################-->
+        <hr id="line" />
+        <!--Creating own custom-->
+        <div id="own-custom">
+          <a href="#arrow"><button id="own-custom-button" onclick="alert('1. Click on BOOK NOW !!!\n2. Select your choice')">Customize your Room</button></a>
+        </div>
+      </div>
+    </section>
+    <div style="padding: 3.3vw;background-color:  rgb(44, 185, 44);margin-left: -8px;margin-right: -8px;" id="payment">
+    </div>
+    <!--*******************************************************************************************************************-->
+    <!--PAYMENT OPTIONS CONTENT-->
+    <section>
+    <div id="payment-options"> 
+      <h1>Payment Options</h1>
+      <div class="cols" id="col-1">
+        <form>
+
+          <div id="col-11" class="col-col">
+            <h3>Billing Address</h3>
+            <label for="fname" class="col-11-all"><img src="images/logo/person.png" alt="person logo" class="col-11-images"/> Full Name</label>
+            <br/>
+            <input type="text" class="col-11-all" name="firstname" placeholder="Ravi Kumar" required>
+            <br/>
+            <label for="email" class="col-11-all"><img src="images/logo/ss-mail-icon.png" alt="email logo" class="col-11-images"/> Email</label>
+            <br/>
+            <input type="text" class="col-11-all" id="email" name="email" placeholder="ravi@gmail.com" required>
+            <br/>
+            <label for="adr" class="col-11-all"><img src="images/logo/order-delivered-filled.png" alt="address logo" class="col-11-images"/> Address</label>
+            <br/>
+            <input type="text"  class="col-11-all" id="adr" name="address" placeholder="343 Model Town" required>
+            <br/>
+            <label for="city" class="col-11-all"><img src="images/logo/city.png" alt="city logo" class="col-11-images"/> City</label>
+            <br/>
+            <input type="text" class="col-11-all" id="city" name="city" placeholder="Ambala" required>
+            <br/>
+            <!---------------------------->
+            <div>
+              <div class="inner-col">
+                <label for="state" class="col-11-all">State</label>
+                <br/>
+                <input type="text" class="col-11-all" id="state" name="state" placeholder="Haryana" required>
+              </div>
+              <div class="inner-col">  
+                <label for="zip" class="col-11-all">Zip</label>
+                <br/>
+                <input type="text" class="col-11-all" id="zip" name="zip" placeholder="134003" required>
+              </div>
+            </div>
+            <!---------------------------->
+          </div>    
+          
+          <div id="col-12"  class="col-col">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <br/>
+            <div class="icon-container">
+              <img src="images/cards/246x0w.jpg" onclick="creditcard(0)" class="card" name="0"/>
+              <img src="images/cards/Mastercard-Download-PNG.png" onclick="creditcard(1)" class="card" name="0"/>
+              <img src="images/cards/PayPal.png" onclick="creditcard(2)" class="card" name="0"/>
+              <img src="images/cards/Paytm-Logo-720x320.png" onclick="creditcard(3)" class="card" name="0"/>
+              <img src="images/cards/visa.png" onclick="creditcard(4)" class="card" name="0"/>
+            </div>
+            <br/>
+            <label for="cname" id="nameofcard">Name of Card</label>
+            <br/>
+            <select id="cname" onclick="cnames();" required>
+              <option value="SBI">SBI Card</option>
+              <option value="Master">Master Card</option>
+              <option value="PayPal">PayPal</option>
+              <option value="Paytm">Paytm</option>
+              <option value="VISA">VISA Card</option>
+            </select> 
+            <br/>
+            <label for="ccnum">Credit card number</label>
+            <br/>
+            <input type="number" min="1000" max="9999" id="ccnum" name="cardnumber" placeholder="1000" required> -
+            <input type="number" min="1000" max="9999" id="ccnum" name="cardnumber" placeholder="2000" required> -
+            <input type="number" min="1000" max="9999" id="ccnum" name="cardnumber" placeholder="3000" required> -
+            <input type="number" min="1000" max="9999" id="ccnum" name="cardnumber" placeholder="4000" required>
+            <br/>
+            <label for="expmonth" class="col-11-all">Exp Month</label>
+            <br/>
+            <input type="text" class="col-11-all" id="expmonth" name="expmonth" placeholder="September" required>
+            <br/>
+            <!---------------------------->
+            <div>
+              <div class="inner-col">
+                  <label for="expyear" class="col-11-all">Exp Year</label>
+                  <br/>
+                  <input type="text" class="col-11-all" id="expyear" name="expyear" placeholder="2018" required>
+              </div>
+              <div class="inner-col">
+                  <label for="cvv" class="col-11-all">CVV</label>
+                  <br/>
+                  <input type="text" class="col-11-all" id="cvv" name="cvv" placeholder="352" required>
+              </div>
+            </div>
+            <!---------------------------->
+          </div>
+          
+          <div id="col-13">
+            <input type="submit" value="Continue to Payment" class="btn">
+          </div>
+        </form>
+      </div>
+
+      <div class="cols" id="col-2">
+        <h4 style="color:black">Cart <span class="col-2-right"><img src="images/logo/trolley.png" alt="trolly" class="col-11-images"/> <span id="cart">0</span></span></h4>
+        <p> Single Room <span class="col-2-right">Rs. 0</span></p>
+        <p> Double Room <span class="col-2-right">Rs. 0</span></p>
+        <p> Triple Room <span class="col-2-right">Rs. 0</span></p>
+        <p> Custom Room <span class="col-2-right">Rs. 0</span></p>
+        <hr>
+        <p>Total: <span class="price" style="color:black">Rs. 0</span></p>
+      </div>      
+    </div>
+    </section>
+
+  <footer>
+  </footer>
+</body>
+</html>

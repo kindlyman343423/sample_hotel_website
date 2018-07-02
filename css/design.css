@@ -1,0 +1,535 @@
+/*STYLING HEADER*/
+#header-list{
+    background: transparent;
+    border-radius: 20px;
+    font-size: 1vw;
+    /*z-index: 0;*/
+}
+.header-container{
+    display: inline-flex;
+    /*padding: 20px;*/
+    font-weight: bold;
+    color: white;
+    margin-top: -1vw;
+}
+header{
+    position: fixed;
+}
+.header-button{
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 20px;
+}
+#lgo{
+    margin-right: 55vw;
+    float: left;
+}
+/*DYNAMIC IMAGES*/
+.header-logo{
+  height: 5vw;
+  width: 10vw;
+}
+/*ONLY TEXT DASHBOARD*/
+.up{
+    margin-top: 0.8vw;
+    font-size: 1.2vw;
+    /*
+    background-color: none;
+    border-radius: none;
+    */
+  }
+.up > a:link{
+  color: white;
+  text-decoration: none;
+}
+.up > a:visited{
+  color: white;
+  text-decoration: none;
+}
+.up:hover{
+  background-color: yellow;/*rgb(238, 69, 69);*/
+  border-radius: 20px;
+}
+/*DIV SECTION*/
+/* {box-sizing: border-box;}*/
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 98%;/*1750px;*/
+  position: relative;
+  margin: 0px;
+  z-index: -2;
+  margin-top: -4.8%;
+  margin-left: -0.45%;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+/*DIV FOR CENTER CONTENT*/
+
+#center-content{
+  position: absolute; 
+  text-align: center;
+  width: 98.9%;
+}
+#inner-center-content{
+  /*z-index: -1;*/
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-bottom: -12vw;
+  font-weight: bold;
+  font-size: 2em;
+  padding: 10vw;
+  padding-right: 0vw;
+  padding-left: 0vw;
+  /*border: 1px solid white;*/
+  margin-top: -0.5vw;
+}
+#center-image{
+  opacity: 1;
+  height: 5%;
+  float: right;
+  width: 25%;
+  margin-top: 6vw;
+  border-radius: 200px;
+  /*z-index: 0;*/
+}
+#center-image:hover{
+  opacity: 1;
+}
+#inner-text{
+  color: white;
+  font-size: 3em;
+}
+.col{
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 50px black;
+  /*background-color: rgb(238, 69, 69);*/
+  padding: 5px;
+  /*border-radius: 20px;*/
+  padding-bottom: 0px;
+  /*border: 1px solid whitesmoke;*/
+}
+#summ{
+  color: rgb(238, 69, 69);
+  border: none;
+}
+summary{
+  outline: none;
+}
+/*STYLING FORM*/
+#sum-form{
+  color: black;
+    text-shadow: 1px 1px 2px white, 0 0 25px white, 0 0 25px red;
+}
+.form-button{
+ color: white;
+ background-color: black;
+ border: none;
+ padding: 0.5vw;
+ font-size: 0.7em;  
+}
+#typebed,#typenumber{
+  font-size: 0.7em;
+}
+#hide{
+ display: none;
+ color: white;
+ text-decoration: none; 
+}
+#hide:link,#hide:visited{
+  color: white;
+  text-decoration: none;
+}
+
+/***************************************************/
+/*DON'T CHANGE THE CONTENT*/
+/*CREATING CUSTOMS*/
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+/*STYLING IMAGES OF CUSTOM CONTENT*/
+img.avatar {
+  width: 20%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: none;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  text-shadow: none; 
+  text-align: initial;
+  font-size: 1vw;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: 80%;
+  border-radius: 20px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/*********************************************/
+/*DRAG AND DROP API*/
+#div1 {
+  width: 30vw;
+  height: 15vw;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  background-color: rgb(250, 63, 63);
+}
+/*SINGLE  BED ROOM*/
+#div2{
+  width: 20vw;
+  height: 4vw;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  background-color: aqua;
+}
+.bed{
+  width: 6vw;
+  height: 3vw;
+}
+/*DOUBLE BED ROOM*/
+#div3{
+  width: 20vw;
+  height: 4vw;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  background-color: lightblue;
+}
+/*TRIPLE BED ROOM*/
+#div4{
+  width: 20vw;
+  height: 4vw;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+  background-color: lightskyblue;
+}
+.set-draganddrop{
+  display: inline-block;
+}
+#drag-right{
+  /*border: 1px solid red;*/
+  float: right;
+  /*padding-left: 8vw;*/
+  padding-right: 8vw;
+}
+#drag-left{
+  padding-left: 8vw;
+  /*padding-right: 8vw;*/
+}
+#drag-left > p,#drag-right p{
+  text-align: center;
+}
+
+/*******************************************/
+/*SECOND SECTION ROOMS*/
+#rooms{
+  height: 43.3vw;
+  width: 98vw;
+  /*border: 2px solid black;*/
+  padding-top: 3vw;
+}
+.rooms-slide{
+  width: 30%;
+  display: inline-block;
+  border: 1px dashed black;
+  margin: 1.38vw;
+  border-radius: 20px;
+}
+.rooms-image{
+  width: 27vw;
+  height: 18vw;
+  margin: 1.25vw;
+  margin-bottom: 0.5vw;
+  opacity: 0.9;
+}
+img.rooms-image:hover{
+ opacity: 1; 
+}
+.rooms-slide > p,.booknow{
+  border-radius: 20px;
+  background-color: rgb(250, 63, 63);
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  width: 20vw;
+  margin-left: 4.5vw;
+  margin-right: 1.2vw;
+  padding: 0.5vw;
+} 
+div.rooms-slide > a{
+  text-decoration: none;
+}
+.rooms-slide > p:hover,.booknow:hover{
+  background-color: rgb(36, 31, 31);
+}
+
+.BED{
+  width: 2.5vw;
+  height: 1.5vw;
+  padding: 0.4vw;
+  opacity: 0.8;
+}
+.BED:hover{
+  opacity: 1;
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+.tags{
+  /*border: 1px solid rgb(235, 41, 41);*/
+  padding: 0.5vw;
+  width: 26vw;
+  margin-left: 1.2vw;
+}
+.booknow > a:link,.booknow > a:visited{
+  color: white;
+  text-decoration: none;
+}
+#line{
+  background-color: gray;
+  width: 80vw;
+  border: 1px solid black;
+  padding: 0;
+}
+#own-custom{
+  text-align: center;
+  padding: 1.8vw;
+}
+#own-custom-button{
+  padding: 0.8vw;
+  font-size: 1.1vw;
+  background-color: rgb(44, 185, 44);
+  border: none;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+}
+#own-custom-button:hover{
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
+/********************************************/
+/*PAYMENT OPTIONS*/
+#payment-options
+{
+  border: 1px solid black;
+  height: 46.5vw;
+  width: 98vw;
+  font-family: Arial;
+  font-size: 1vw;
+  padding: 8px;
+  box-sizing: border-box;
+}
+div#payment-options > h1{
+  text-align: center;
+  font-size: 2vw;
+}
+.cols{
+  border: 2px solid lightgray;
+  display: inline-block;
+}
+#col-1{
+  float: left;
+  width: 68%;
+  margin-left: 1.5vw;
+  padding: 0.5vw;
+  background-color: #f2f2f2;
+}
+#col-11{
+ /*border: 1px solid red;*/ 
+ /*margin-left: 2vw;*/
+ width: 48%;
+}
+.col-11-all{
+  margin: 1vw;
+  padding: 0.5vw;
+  width: 90%;
+}
+#col-12{
+  /*border: 1px solid red;*/
+  margin-right: 2vw;
+  width: 48%;
+}
+div.col-col{
+  display: inline-block;
+}
+#col-2{
+  float: right;
+  width: 25%;
+  margin-right: 1.5vw;
+  padding: 0.1vw;
+  background-color: #f2f2f2;
+}
+div#col-13{
+  text-align:center;
+}
+.card{
+  height: 3vw;
+  width: 4vw;
+  margin: 0.5vw;
+  border-radius: 0.1vw;
+}
+.card:first-child{
+  border: 2px solid red;
+}
+.inner-col{
+  display: inline-block;
+}
+.col-11-images{
+  height: 1vw;
+  width: 1vw;
+}
+#col-11 > h3,#col-12>h3,label[for="fname"],.icon-container,label[for="ccnum"],select#cname{
+  margin-left: 1vw;
+}
+#nameofcard{
+  padding: 0.5vw;
+  margin-left: 1vw;
+}
+input[name="cardnumber"]{
+  margin: 0.8vw;
+  padding: 0.5vw;
+}
+#cname{
+  width: 93.5%;
+  height: 2vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+}
+.col-2-right{
+  float: right;
+}
+.btn{
+  color: white;
+  background-color: rgb(44, 185, 44);
+  font-weight: bold;
+  padding: 1vw;
+  font-size: 1vw;
+  border-radius: 10px;
+  border: none;
+}
+.btn:hover{
+  background-color: red;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}

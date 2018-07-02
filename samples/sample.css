@@ -1,0 +1,32 @@
+/*DRAG AND DROP API*/
+#div1 {
+    width: 650px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+/*SINGLE  BED ROOM*/
+#div2{
+    width: 650px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+.bed{
+    width: 200px;
+    height: 90px;
+}
+/*DOUBLE BED ROOM*/
+#div3{
+    width: 650px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+/*TRIPLE BED ROOM*/
+#div4{
+    width: 650px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}

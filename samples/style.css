@@ -1,0 +1,208 @@
+/*FOR PARTICLES BACKGROUND*/
+#particles-js{
+  background-image: url("homepage_slide2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*Using external fonts*/
+@font-face {
+    font-family: "Samarkan";
+    src: url('SAMARN__.TTF');
+}
+/*FOR CUEPAMS LEFT SIDE*/
+.side > aside{
+    color: white;
+    font-size: 3em;
+    margin-left: 5%;
+    font-family: Samarkan;
+    position: absolute;
+    top: 5%;
+}
+.side > aside a:link,.side > aside a:visited{
+  color: white;
+  text-decoration: none;
+}
+/*CHANGING THE LOGIN*/
+body{
+  margin: 0%;
+  color: #333;
+  font-size: 20px;
+}
+/*DESIGN FOR LOGIN BOX*/
+#login{
+  background: transparent;
+  opacity: 0.9;
+  padding: 2em;
+  position: absolute;
+  top: 25%;
+  left:40%;
+  text-align: center;
+}
+/*STYLING INPUT TYPE*/
+#login input[type="text"],#login input[type="password"]{
+  padding: 4%;
+  text-align: center;
+  background-color: inherit;
+  border-radius: 10px;
+  box-shadow: 10px 4px 150px mediumblue;
+  border: 1px solid white;/*#4A4A4A;*/
+  font-size: 18px;
+  color: white;
+}
+/*STYLING INPUT ON FOCUS*/
+#login input[type="text"]:focus,#login input[type="password"]:focus{
+  background: transparent;
+}
+/*STYLING INPUTS PLACEHOLDER*/
+/*
+#login input[placeholder]{
+  font-style:;
+}
+*/
+/*STYLING INPUTS PLACEHOLDER ON FOCUS*/
+#login input[placeholder]:focus{
+  color: white;
+  font-weight: bold;
+}
+/*STYLING BUTTON STYLE*/
+#button{
+  border-radius: 11px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: orangered;
+  color: #fff;
+  border: 0px;
+  font-weight: bold;
+  font-size: 0.9vw;
+}
+/*LOGIN BUTTON ON HOVER*/
+#button:hover{
+  background-color: red;
+}
+/*STYLING BUTTON DIV*/
+#buttoner{
+  text-align: center;
+  padding: 10px;
+}
+/*PARA UNDER INPUT*/
+.under{
+  color: white;
+  font-weight: bold;
+  text-align: right;
+  font-size: 15px;
+}
+/*LAST PARA*/
+#last,#last>button{
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+/*STYLING FOOTER*/
+#footdiv{
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  font-size: 18px;
+}
+label{
+  color: white;
+  font-weight: bold;
+}
+
+/********************************************/
+/*SIGNUP FORM*/
+
+/* Set a style for all buttons */
+.cancelbtn,.signupbtn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: transparent;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}

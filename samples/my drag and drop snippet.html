@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" href="sample.css"/>
+<script>
+var singlebed=0;
+var sofa=0;
+var wifi=0;
+var doublebed=0;
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    var data = ev.dataTransfer.getData("text");
+    //alert(data);
+    if(data=="drag1" || data=="drag7")
+    {
+        if(singlebed!=0)
+        {
+            singlebed--;
+        }
+        document.getElementById('sbed').innerHTML = singlebed;
+    }
+    else if(data=="drag2" || data=="drag5")
+    {
+        if(sofa != 0)
+        {
+            sofa--;
+        }
+        document.getElementById('sfa').innerHTML = sofa;
+    }
+    else if(data=="drag3" || data=="drag6" || data=="drga9")
+    {
+        if(wifi!=0)
+        {
+            wifi--;
+        }
+        document.getElementById('wfi').innerHTML = wifi;
+    }
+    else if(data=="drag4" || data=="drag8")
+    {
+        if(doublebed != 0)
+        {
+            doublebed--;
+        }
+        document.getElementById('dbed').innerHTML = doublebed;
+    }
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    if(data=="drag1" || data=="drag7")
+    {
+        singlebed++;
+        document.getElementById('sbed').innerHTML = singlebed;
+    }
+    else if(data=="drag2" || data=="drag5")
+    {
+        sofa++;
+        document.getElementById('sfa').innerHTML = sofa;
+    }
+    else if(data=="drag3" || data=="drag6" || data=="drga9")
+    {
+        wifi++;
+        document.getElementById('wfi').innerHTML = wifi;
+    }
+    else if(data=="drag4" || data=="drag8")
+    {
+        doublebed++;
+        document.getElementById('dbed').innerHTML = doublebed;
+    }
+}
+</script>
+</head>
+<body>
+<div>
+    <div>
+        <p>Customise your room:</p>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <span>Customised Room:</span>
+        Single Bed: <span id="sbed">0</span>
+        Sofas: <span id="sfa">0</span>
+        Wifi: <span id="wfi">0</span>
+        Double Bed: <span id="dbed">0</span>
+        <br/>
+    </div>
+    <!--
+    <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">-->
+
+    <br/><br/>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag1" src="../images/custom/singlebed.png" draggable="true" ondragstart="drag(event)" class="bed">
+        <img id="drag2" src="../images/custom/sofa with lamp.jpg" draggable="true" ondragstart="drag(event)" class="bed">
+        <img id="drag3" src="../images/custom/WiFi-Icon-Missing.png" draggable="true" ondragstart="drag(event)" class="bed">
+    </div>
+    <span>SINGLE ROOM</span>
+    Single Bed: 1
+    Sofas: 1
+    Wifi: 1
+    Double Bed: 0
+
+    <br/><br/>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag4" src="../images/custom/double bed.jpeg" draggable="true" ondragstart="drag(event)" class="bed">
+        <img id="drag5" src="../images/custom/sofa with lamp.jpg" draggable="true" ondragstart="drag(event)" class="bed">
+        <img id="drag6" src="../images/custom/WiFi-Icon-Missing.png" draggable="true" ondragstart="drag(event)" class="bed">
+    </div>
+    <span>DOUBLE ROOM</span>
+    Single Bed: 0
+    Sofas: 1
+    Wifi: 1
+    Double Bed: 1
+
+    <br/><br/>
+    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag7" src="../images/custom/singlebed.png" draggable="true" ondragstart="drag(event)" class="bed">
+        <img id="drag8" src="../images/custom/double bed.jpeg" draggable="true" ondragstart="drag(event)" class="bed">
+        <img id="drag9" src="../images/custom/WiFi-Icon-Missing.png" draggable="true" ondragstart="drag(event)" class="bed">
+    </div>
+    <span>TRIPLE ROOM</span>
+    Single Bed: 1
+    Sofas: 0
+    Wifi: 1
+    Double Bed: 1 
+</div>    
+</body>
+</html>
